@@ -1,0 +1,56 @@
+//FONTS
+@font-face {
+    font-family: "font1";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "font2";
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "font3";
+    src: url(../fonts/Allura-Regular.ttf);
+}
+
+$font1: "font1", serif;
+$font2: "font2", serif;
+$font3: "font3", cursive;
+
+//COLORS
+$white: rgb(236, 234, 234);
+$black: rgba(18, 18, 18, 0.95);
+$gray: rgb(146, 144, 144);
+$color1: rgb(166, 114, 69);
+
+//MIXINS
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//REGLAGE GENERAUX
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    font-family: $font1;
+    background: $black;
+
+    @media screen and (max-width: 385px) {
+        width: 100%;
+        
+    }
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    color: $color1;
+    font-family: $font3;
+}

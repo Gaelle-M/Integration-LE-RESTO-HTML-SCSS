@@ -1,0 +1,133 @@
+.section4 {
+    padding: 50px 20px 90px;
+
+    @media screen and (max-width: 680px) {
+        display: none;
+    }
+
+    .events-container {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 100;
+        }
+        h4 {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $font2;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-top: -10px;
+        }
+        img {
+            margin: 30px 0;
+        }
+        .event-grid {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "a b"
+                "c b";
+            gap: 20px;
+
+            .date-content {
+                @include center;
+                width: 85px;
+                height: 85px;
+                margin: 0 auto;
+                color: $white;
+                flex-direction: column;
+                line-height: 22px;
+                background: $black;
+
+                h6 {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .address {
+                background: $white;
+
+                h3 {
+                    letter-spacing: 1px;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-left: 8px;
+                }
+                p {
+                    font-size: 0.9rem;
+                    color: $gray;
+                    margin-top: 20px;
+                    letter-spacing: 1px;
+
+                    i {
+                        margin-right: 3px;
+                        font-size: 0.7rem;
+                        transform: translateY(-2px);
+
+                        &:nth-child(2) {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                h5 {
+                    letter-spacing: 2px;
+                    margin-top: 25px;
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    cursor: pointer;
+                }
+            }
+
+            .event-left {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                text-align: left;
+
+                .date {
+                    @include center;
+                }
+                .address {
+                    color: $black;
+                    padding: 30px 20px;
+                }
+            }
+
+            .event-1 {
+                grid-area: a;
+
+                .date {
+                    background: url(../img/event-01.jpg) center/cover;
+                }
+            }
+            .event-2 {
+                grid-area: c;
+
+                .date {
+                    background: url(../img/event-02.jpg) center/cover;
+                }
+            }
+            .event-3 {
+                grid-area: b;
+                background: url(../img/event-03.jpg) center/cover;
+                padding: 25px;
+
+                .address {
+                    height: 100%;
+                    padding: 0 12px;
+
+                    h3 {
+                        margin: 40px 0 15px;
+                    }
+                    h5 {
+                        padding: 45px 0;
+                    }
+                }
+            }
+        }
+    }
+}
